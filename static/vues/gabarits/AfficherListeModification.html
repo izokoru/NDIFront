@@ -10,14 +10,39 @@
             crossorigin="anonymous"
     />
 
+    <link
+    rel="stylesheet"
+    href="../../../css/bulma-switch.min.css"
+    />
+
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <script>
+        function modeNuit(){
+            var element = document.getElementById("switchRoundedWarning").checked;
+            document.body.style.setProperty('color', 'inherit', 'important');
+            if(element){
+                for(i = 0; i < document.childElementCount; i++){
+                    document.children[i].style.background = "black";
+                    document.children[i].style.color = "white";
+
+                }
+            }
+            else {
+                for (i = 0; i < document.childElementCount; i++) {
+                    document.children[i].style.background = "white";
+                    document.children[i].style.color = "black";
+                }
+            }
+        }
+    </script>
 </head>
 
 <header>
     <nav>
 
         <div class="field">
-            <input id="switchRoundedWarning" type="checkbox" name="switchRoundedWarning" class="switch is-rounded is-warning" checked="checked">
+            <input id="switchRoundedWarning" type="checkbox" name="switchRoundedWarning" class="switch is-rounded is-warning" checked="checked" onclick="modeNuit();">
             <label for="switchRoundedWarning">Switch rounded warning</label>
         </div>
     </nav>
@@ -31,4 +56,6 @@
 <footer>
 
 </footer>
+
+<script> modeNuit(); </script>
 </html>
