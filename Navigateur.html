@@ -12,7 +12,22 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
+
+<header>
+    <nav>
+
+    </nav>
+</header>
+
 <body>
+    <fieldset>
+        <form method="post" name="formRechercher" action="vues/gabarits/ResultatRechercheSauveteurBateau.html">
+            <label for="barreRechercher">Rechercher le profil d'une personne, ou d'un bateau</label>
+            <input type="text" name="fbarreRecherche" id="barreRechercher"/>
+            <input type="submit" name="Rechercher" id="rechercher"/>
+        </form>
+    </fieldset>
+
     <div class="subtitle">
         <h1 class="title">
             Hello World
@@ -24,4 +39,12 @@
 
 
 </body>
+
+<footer>
+    <button>Connexion</button>
+
+    <a href="vues/gabarits/Jeu.html">
+        <img src="" alt="Jeu"/>
+    </a>
+</footer>
 </html>
