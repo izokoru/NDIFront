@@ -44,9 +44,16 @@
 </head>
 
 <header>
-    <nav class="navbar" id="navbar">
-        <div class="field">
-        <input id="switchRoundedWarning" type="checkbox" name="switchRoundedWarning" class="switch is-rounded is-warning" onclick="modeNuit();" checked="checked">
+    <nav  style="background: #1d72aa;" class="navbar" id="navbar">
+
+        <div style="padding-top: 1%; padding-left: 2%;" class="field">
+            <a class="button" href="Navigateur.html"> Accueil </a>
+        </div>
+
+
+
+        <div style="position: absolute; right: 1%; top: 10%;" class="field">
+        <input id="switchRoundedWarning" type="checkbox" name="switchRoundedWarning" class="switch is-rounded is-warning" onclick="modeNuit();">
         <label for="switchRoundedWarning">Switch rounded warning</label>
         </div>
 
@@ -62,7 +69,7 @@
 
     </div>
 
-    <div class="field is-grouped" style="width: 33%; height: 100%;">
+    <div style="border: 2px solid black; margin-top: 1%; padding: 1%; border-radius: 4px; box-shadow: 10px 5px 5px gray;" class="field is-grouped" style="width: 33%; height: 100%;">
         <form method="post" name="formRechercher" action="static/vues/gabarits/ResultatRechercheSauveteurBateau.html">
             <label class="label is-left" for="barreRechercher">Rechercher le profil d'une personne, ou d'un bateau</label>
             <input class="input is-left" type="text" name="fbarreRecherche" id="barreRechercher"/>
@@ -84,7 +91,7 @@
 
 </body>
 
-<footer style="height: 6%; width: 100%;">
+<footer style="height: 6%; float: left; width: 100%;">
     <button class="button is-info">Connexion</button>
 
     <a style="height: 100%; width:7%; float: right;" href="static/vues/gabarits/Jeu.html">
