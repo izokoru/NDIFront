@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html style="width: 100%; height: 100%;" lang="en">
+<head style="width: 100%; height: 100%;">
     <meta charset="UTF-8">
     <title>Title</title>
     <link
@@ -13,7 +13,12 @@
     <link
         rel="stylesheet"
         href="css/bulma-switch.min.css"
-        />
+    />
+
+    <link
+        rel="stylesheet"
+        href="css/Navigateur"
+    />
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
@@ -39,7 +44,7 @@
 </head>
 
 <header>
-    <nav>
+    <nav class="navbar" id="navbar">
         <div class="field">
         <input id="switchRoundedWarning" type="checkbox" name="switchRoundedWarning" class="switch is-rounded is-warning" onclick="modeNuit();" checked="checked">
         <label for="switchRoundedWarning">Switch rounded warning</label>
@@ -48,32 +53,42 @@
     </nav>
 </header>
 
-<body>
-    <fieldset>
-        <form method="post" name="formRechercher" action="static/vues/gabarits/ResultatRechercheSauveteurBateau.html">
-            <label for="barreRechercher">Rechercher le profil d'une personne, ou d'un bateau</label>
-            <input type="text" name="fbarreRecherche" id="barreRechercher"/>
-            <input type="submit" name="Rechercher" id="rechercher"/>
-        </form>
-    </fieldset>
+<body style="width: 100%; height: 85%;">
+    <div style="width: 33%; height: 100%; float: left;">
 
-    <div>
-        <h1>
-            Hello World
-        </h1>
-        <p>
-            My first website with Bulma !
-        </p>
     </div>
 
+    <div style="width: 33%; height: 100%; float: right;">
+
+    </div>
+
+    <div class="field is-grouped" style="width: 33%; height: 100%;">
+        <form method="post" name="formRechercher" action="static/vues/gabarits/ResultatRechercheSauveteurBateau.html">
+            <label class="label is-left" for="barreRechercher">Rechercher le profil d'une personne, ou d'un bateau</label>
+            <input class="input is-left" type="text" name="fbarreRecherche" id="barreRechercher"/>
+            <div class="field is-grouped"></div>
+            <input class="button is-link" type="submit" value="Rechercher" id="rechercher"/>
+
+            <div class="field is-grouped"></div>
+            <div class="field is-grouped"></div>
+            <div class="field is-grouped"></div>
+            <div class="field is-grouped"></div>
+
+
+            <button style="display: block;" class="button is-info is-fullwidth is-large">
+                <a style="color: white;"> Page communautaire </a>
+            </button>
+        </form>
+
+    </div>
 
 </body>
 
-<footer>
-    <button>Connexion</button>
+<footer style="height: 6%; width: 100%;">
+    <button class="button is-info">Connexion</button>
 
-    <a href="static/vues/gabarits/Jeu.html">
-        <img src="" alt="Jeu"/>
+    <a style="height: 100%; width:7%; float: right;" href="static/vues/gabarits/Jeu.html">
+        <img style="height: 100%; width:50%; float: right;" src="images/bateau.jfif" alt="Jeu"/>
     </a>
 </footer>
 
