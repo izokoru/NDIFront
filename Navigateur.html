@@ -27,6 +27,8 @@
             var element = document.getElementById("switchRoundedWarning").checked;
             document.body.style.setProperty('color', 'inherit', 'important');
             if(element){
+                var element = document.getElementById("Dform").style.border = "1px solid white";
+                document.getElementById("fTexte").style.color = "white";
                 for(i = 0; i < document.childElementCount; i++){
                     document.children[i].style.background = "black";
                     document.children[i].style.color = "white";
@@ -34,6 +36,8 @@
                 }
             }
             else {
+                var element = document.getElementById("Dform").style.border = "1px solid black";
+                document.getElementById("fTexte").style.color = "black";
                 for (i = 0; i < document.childElementCount; i++) {
                     document.children[i].style.background = "white";
                     document.children[i].style.color = "black";
@@ -69,9 +73,9 @@
 
     </div>
 
-    <div style="border: 2px solid black; margin-top: 1%; padding: 1%; border-radius: 4px; box-shadow: 10px 5px 5px gray;" class="field is-grouped" style="width: 33%; height: 100%;">
+    <div id="Dform" style="border: 2px solid black; margin-top: 1%; padding: 1%; border-radius: 4px; box-shadow: 10px 5px 5px gray;" class="field is-grouped" style="width: 33%; height: 100%;">
         <form method="post" name="formRechercher" action="static/vues/gabarits/ResultatRechercheSauveteurBateau.html">
-            <label class="label is-left" for="barreRechercher">Rechercher le profil d'une personne, ou d'un bateau</label>
+            <label id="fTexte" class="label is-left" for="barreRechercher">Rechercher le profil d'une personne, ou d'un bateau</label>
             <input class="input is-left" type="text" name="fbarreRecherche" id="barreRechercher"/>
             <div class="field is-grouped"></div>
             <input class="button is-link" type="submit" value="Rechercher" id="rechercher"/>
