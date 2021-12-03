@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" style="height: 100%; width: 100%;">
+<head style="height: 100%; width: 100%;">
     <meta charset="UTF-8">
     <title>Title</title>
     <link
@@ -21,6 +21,8 @@
         function modeNuit(){
             element = document.getElementById("switchRoundedWarning").checked;
             document.body.style.setProperty('color', 'inherit', 'important');
+            document.getElementById("texteLogin").style.color = "white";
+            document.getElementById("texteMdp").style.color = "white";
             if(element){
                 for(i = 0; i < document.childElementCount; i++){
                     document.children[i].style.background = "black";
@@ -29,6 +31,8 @@
                 }
             }
             else {
+                document.getElementById("texteLogin").style.color = "black";
+                document.getElementById("texteMdp").style.color = "white";
                 var element = document.getElementById("Dform").style.border = "1px solid black";
                 document.getElementById("fTexte").style.color = "black";
                 for (i = 0; i < document.childElementCount; i++) {
@@ -57,14 +61,25 @@
     </nav>
 </header>
 
-<body>
-    <fieldset>
-        <form method="post" name="formLoginAdmin">
-            <label for="login"> Veuillez saisir votre identifiant</label>
-            <input type="text" name="flogin" id="login"/>
+<body style="height: 100%; width: 100%;">
+    <div style="width: 33%; height: 100%; float: left;">
 
-            <label for="mdp"> Veuillez saisir votre mot de passe</label>
-            <input type="text" name="fmdp" id="mdp"/>
+    </div>
+
+    <div style="width: 33%; height: 100%; float: right;">
+
+    </div>
+    <fieldset>
+        <form method="post" name="formLoginAdmin" action="/static/vues/gabarits/DoubleAutentificationAdmin.html">
+            <label id="texteLogin" class="label is-left" for="login"> Veuillez saisir votre identifiant</label>
+            <input class="input is-left" type="text" name="flogin" id="login"/>
+
+            <label id="texteMdp" class="label is-left" for="mdp"> Veuillez saisir votre mot de passe</label>
+            <input class="input is-left" type="text" name="fmdp" id="mdp"/>
+
+            <div class="field is-grouped"></div>
+
+            <input class="button is-link" type="submit" value="Valider" id="Valider"/>
         </form>
     </fieldset>
 </body>
