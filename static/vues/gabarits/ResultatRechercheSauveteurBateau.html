@@ -10,6 +10,12 @@
             crossorigin="anonymous"
     />
 
+    <link
+            rel="stylesheet"
+            href="../../../css/bulma-switch.min.css"
+    />
+
+
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script>
         function modeNuit(){
@@ -30,6 +36,16 @@
             }
         }
     </script>
+
+    <script>
+
+        httpRequest = new XMLHttpRequest()
+        httpRequest.open('GET', 'localhost:8090/spring/api/personne?id=0', true);
+        httpRequest.send();
+        alert(httpRequest.responseText);
+
+
+    </script>
 </head>
 
 <header>
@@ -42,6 +58,7 @@
     </nav>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
 </header>
 
 <body>
