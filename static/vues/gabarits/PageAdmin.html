@@ -5,15 +5,21 @@
     <title>Title</title>
     <link
             rel="stylesheet"
-            href="css/bulma.min.css"
+            href="../../../css/bulma.min.css"
             integrity="sha256-D9M5yrVDqFlla7nlELDaYZIpXfFWDytQtiV+TaH6F1I="
             crossorigin="anonymous"
     />
 
+    <link
+            rel="stylesheet"
+            href="../../../css/bulma-switch.min.css"
+    />
+
+
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script>
         function modeNuit(){
-            var element = document.getElementById("switchRoundedWarning").checked;
+            element = document.getElementById("switchRoundedWarning").checked;
             document.body.style.setProperty('color', 'inherit', 'important');
             if(element){
                 for(i = 0; i < document.childElementCount; i++){
@@ -23,6 +29,8 @@
                 }
             }
             else {
+                var element = document.getElementById("Dform").style.border = "1px solid black";
+                document.getElementById("fTexte").style.color = "black";
                 for (i = 0; i < document.childElementCount; i++) {
                     document.children[i].style.background = "white";
                     document.children[i].style.color = "black";
@@ -33,16 +41,22 @@
 </head>
 
 <header>
-    <nav>
-        <div class="field">
+    <nav  style="background: #1d72aa;" class="navbar" id="navbar">
+
+        <div style="padding-top: 1%; padding-left: 2%;" class="field">
+            <a class="button" href="../../../Navigateur.html"> Accueil </a>
+        </div>
+
+
+
+        <div style="position: absolute; right: 1%; top: 10%;" class="field">
             <input id="switchRoundedWarning" type="checkbox" name="switchRoundedWarning" class="switch is-rounded is-warning" onclick="modeNuit();" checked="checked">
             <label for="switchRoundedWarning">Switch rounded warning</label>
         </div>
 
     </nav>
-
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </header>
+
 <body>
     <fieldset>
         <form method="post" name="formLoginAdmin">
@@ -58,4 +72,7 @@
 <footer>
 
 </footer>
+
+<script>modeNuit();</script>
+
 </html>

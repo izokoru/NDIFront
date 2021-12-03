@@ -17,6 +17,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
     <script>
         function modeNuit(){
             var element = document.getElementById("switchRoundedWarning").checked;
@@ -36,51 +37,18 @@
             }
         }
     </script>
-
-    <script>
-
-        /*httpRequest = new XMLHttpRequest()
-        httpRequest.open('GET', 'localhost:8090/spring/api/personne?id=1', true);
-        httpRequest.send();
-        alert(httpRequest.responseText);
-
-
-         */
-        var div1 = document.createElement('div');
-
-        for(){
-            var element = document.createElement('div');
-            var element2 = document.createElement('p')
-            var texte = document.createTextNode('');
-            element2.appendChild(texte);
-            element.appendChild(element2);
-
-            var element3 = document.createElement('div');
-            var element4 = document.createElement('p')
-            var texte2 = document.createTextNode('');
-            element4.appendChild(texte2);
-            element3.appendChild(element4);
-
-            var bloc = document.getElementById('infos');
-            bloc.appendChild(element);
-            bloc.appendChild(element3);
-
-        }
-
-
-
-
-    </script>
 </head>
 
 <header>
-    <nav class="navbar" id="navbar">
-        <ul>
-            <li>
-                <a href="Navigateur.html"> Accueil </a>
-            </li>
-        </ul>
-        <div class="field">
+    <nav  style="background: #1d72aa;" class="navbar" id="navbar">
+
+        <div style="padding-top: 1%; padding-left: 2%;" class="field">
+            <a class="button" href="../../../Navigateur.html"> Accueil </a>
+        </div>
+
+
+
+        <div style="position: absolute; right: 1%; top: 10%;" class="field">
             <input id="switchRoundedWarning" type="checkbox" name="switchRoundedWarning" class="switch is-rounded is-warning" onclick="modeNuit();" checked="checked">
             <label for="switchRoundedWarning">Switch rounded warning</label>
         </div>
@@ -99,10 +67,13 @@
     <div id="infos" style="width: 33%; height: 100%;" class="field is-grouped">
         <button class="button is-fullwidth" onclick="document.location.href='InfoProfil.html'"> Consulter le profil </button>
 
-        <button class="button is-fullwidth" style="display: block" onclick="document.location.href='Navigateur.html'"> Retour à la page précédente </button>
+        <button class="button is-fullwidth" style="display: block" onclick="document.location.href='../../../Navigateur.html'"> Retour à la page précédente </button>
     </div>
 </body>
 <footer>
 
 </footer>
+
+<script>modeNuit();</script>
+
 </html>

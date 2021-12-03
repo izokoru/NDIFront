@@ -5,12 +5,18 @@
     <title>Title</title>
     <link
             rel="stylesheet"
-            href="css/bulma.min.css"
+            href="../../../css/bulma.min.css"
             integrity="sha256-D9M5yrVDqFlla7nlELDaYZIpXfFWDytQtiV+TaH6F1I="
             crossorigin="anonymous"
     />
 
+    <link
+            rel="stylesheet"
+            href="../../../css/bulma-switch.min.css"
+    />
+
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
     <script>
         function modeNuit(){
             var element = document.getElementById("switchRoundedWarning").checked;
@@ -33,19 +39,26 @@
 </head>
 
 <header>
-    <nav>
-        <div class="field">
+    <nav  style="background: #1d72aa;" class="navbar" id="navbar">
+
+        <div style="padding-top: 1%; padding-left: 2%;" class="field">
+            <a class="button" href="../../../Navigateur.html"> Accueil </a>
+        </div>
+
+
+
+        <div style="position: absolute; right: 1%; top: 10%;" class="field">
             <input id="switchRoundedWarning" type="checkbox" name="switchRoundedWarning" class="switch is-rounded is-warning" onclick="modeNuit();" checked="checked">
             <label for="switchRoundedWarning">Switch rounded warning</label>
         </div>
 
     </nav>
-
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-
 </header>
 
 <body>
 
 </body>
+
+<script>modeNuit();</script>
+
 </html>
