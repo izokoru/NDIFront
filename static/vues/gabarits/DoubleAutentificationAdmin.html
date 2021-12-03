@@ -1,20 +1,28 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html style="width: 100%; height: 100%;" lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <link
             rel="stylesheet"
-            href="css/bulma.min.css"
+            href="../../../css/bulma.min.css"
             integrity="sha256-D9M5yrVDqFlla7nlELDaYZIpXfFWDytQtiV+TaH6F1I="
             crossorigin="anonymous"
     />
 
+    <link
+            rel="stylesheet"
+            href="../../../css/bulma-switch.min.css"
+    />
+
+
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script>
         function modeNuit(){
-            var element = document.getElementById("switchRoundedWarning").checked;
+            element = document.getElementById("switchRoundedWarning").checked;
             document.body.style.setProperty('color', 'inherit', 'important');
+            document.getElementById("texteLogin").style.color = "white";
+            document.getElementById("texteMdp").style.color = "white";
             if(element){
                 for(i = 0; i < document.childElementCount; i++){
                     document.children[i].style.background = "black";
@@ -23,6 +31,10 @@
                 }
             }
             else {
+                document.getElementById("texteLogin").style.color = "black";
+                document.getElementById("texteMdp").style.color = "white";
+                var element = document.getElementById("Dform").style.border = "1px solid black";
+                document.getElementById("fTexte").style.color = "black";
                 for (i = 0; i < document.childElementCount; i++) {
                     document.children[i].style.background = "white";
                     document.children[i].style.color = "black";
@@ -33,21 +45,32 @@
 </head>
 
 <header>
-    <nav>
-        <div class="field">
+    <nav  style="background: #1d72aa;" class="navbar" id="navbar">
+
+        <div style="padding-top: 1%; padding-left: 2%;" class="field">
+            <a class="button" href="../../../Navigateur.html"> Accueil </a>
+        </div>
+
+
+
+        <div style="position: absolute; right: 1%; top: 10%;" class="field">
             <input id="switchRoundedWarning" type="checkbox" name="switchRoundedWarning" class="switch is-rounded is-warning" onclick="modeNuit();" checked="checked">
             <label for="switchRoundedWarning">Switch rounded warning</label>
         </div>
 
     </nav>
-
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </header>
-<body>
+<body style="width: 100%; height: 100%;">
+    <div style="width: 33%; height: 100%; float: left;">
+
+    </div>
+
+    <div style="width: 33%; height: 100%; float: right;">
+
     <fieldset>
         <form>
-            <label for="code"> Veuillez saisir le code qui à été envoyé </label>
-            <input type="text" id="code" name="fcode"/>
+            <label class="label is-left" for="code"> Veuillez saisir le code qui à été envoyé </label>
+            <input class="input is-left" type="text" id="code" name="fcode"/>
         </form>
 
         <img th:src="${QRimg}" />    </fieldset>
