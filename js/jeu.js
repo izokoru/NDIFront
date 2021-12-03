@@ -204,8 +204,10 @@ var mtt = new MouseTouchTracker(canvas,
       }
     }
     else{
-      circle.x = -500;
-      circle.y = -500;
+      circle = new Arc(200, 140, 50, Math.PI * 2);
+
+      circle.render(ctx);
+      rectangle.render(ctx);
 
       var score = parseInt(document.getElementById("score")["value"]);
       document.getElementById("score").value = score + 1;
@@ -253,6 +255,7 @@ var mtt = new MouseTouchTracker(canvas,
 
 
       circle = new Arc(200, 140, 50, Math.PI * 2);
+
       circle.render(ctx);
       rectangle.render(ctx);
     }
